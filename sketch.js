@@ -20,6 +20,7 @@ function preload() {
     birdselect = loadSound("sounds/bird_select.mp3");
     birdfly = loadSound("sounds/bird_flying.mp3");
     pigsnort = loadSound("sounds/pig_snort.mp3");
+    bgImg = loadImage(bg);
 }
 
 function setup(){
@@ -60,9 +61,12 @@ function setup(){
 }
 
 function draw(){
-    if(backgroundImg)
+    if(backgroundImg){
         background(backgroundImg);
-    
+    }
+    else{
+        background(bgImg);
+    }
     noStroke();
     textSize(35);
     fill("white");
